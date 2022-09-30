@@ -188,22 +188,36 @@ function changePrevioImage(imgContainer){
     imgContainer.style.backgroundImage = `url('../images/jordan${imgIndex}-grande.jpg')`    
 }
 
-/* let Finalizar = document.get('.cart-modal__finalizar');
 
-Finalizar.addEventListener('click', ()=>{
-    Swal.fire(
+document.addEventListener('click',(e) =>{
+    if(e.target.matches('.cart-modal__finalizar')){
+        console.log('Delegacion de eventos');
+        Swal.fire(
+            'Muchas Gracias!',
+            'Procesaremos tu compra!',
+            'success'
+          );
+    }
+})
+
+/* let finalizar = document.getElementsByClassName('cart-modal__finalizar');
+
+
+finalizar[0].addEventListener('click', () => { 
+    console.log(finalizar);
+   Swal.fire(
         'Good job!',
         'You clicked the button!',
         'success'
       );
 });   */
 
-let fin = document.getElementById('boton');
+/* let finalizar = document.getElementById('boton');
 
-fin.addEventListener('click', ()=>{
+finalizar.addEventListener('click', ()=>{
     Swal.fire(
         'Muchas Gracias!',
         'Procesaremos tu pago!',
         'success'
       );
-});
+}); */
